@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-versions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Version browser for installed DeepSeek Harness plugins: list published versions, switch or roll back, and uninstall from the Plugins page.",
   "keywords": [
     "dsh",

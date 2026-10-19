@@ -325,9 +325,17 @@ window.__ModuleLoader__.load({
     return {
       inject: ['slots'],
       apply(ctx) {
+        // 插件页：Installed 之后的「版本」标签
         ctx.slots.inject('plugins.tab', () =>
           ctx.slots.register(
             { name: 'plugins.tab', id: 'versions', order: 10, label: () => t('tab') },
+            VersionsTab,
+          ),
+        );
+        // 设置 → 插件：同一个页面的第二个入口，符合「版本管理属于插件设置」的直觉
+        ctx.slots.inject('settings.plugins.tab', () =>
+          ctx.slots.register(
+            { name: 'settings.plugins.tab', id: 'versions', order: 20, label: () => t('tab') },
             VersionsTab,
           ),
         );
