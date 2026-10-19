@@ -12,6 +12,17 @@
   ],
   "author": "DangDangDeng",
   "license": "MIT",
+  "homepage": "https://github.com/DangDangDeng/dsh-plugin-versions#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DangDangDeng/dsh-plugin-versions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DangDangDeng/dsh-plugin-versions/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "index.js",
   "exports": {
