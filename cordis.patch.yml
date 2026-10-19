@@ -1,0 +1,3 @@
+- insert:
+    - id: plugin-versions
+      name: dsh-plugin-versions

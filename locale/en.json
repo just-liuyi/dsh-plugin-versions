@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin Versions",
+    "description": "Lists every published version of an installed plugin and switches or rolls it back, with uninstall in the same tab."
+  }
+}
