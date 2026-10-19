@@ -1,7 +1,7 @@
 /**
  * dsh-plugin-versions — Client half.
  *
- * 在「插件」页的 Installed 之后注册一个「版本」页签：
+ * 在「设置 → 插件」里注册一个「已安装插件」页：
  *   - 列出本 profile 已安装的 bundle
  *   - 展开某个 bundle 时列出它在 registry 上的所有已发布版本
  *   - 支持切换版本（失败自动回滚）与卸载
@@ -18,8 +18,8 @@ window.__ModuleLoader__.load({
     const ZH = String((typeof navigator !== 'undefined' && navigator.language) || 'en').toLowerCase().startsWith('zh');
 
     const STRINGS = {
-      tab: { zh: '版本', en: 'Versions' },
-      title: { zh: '已安装插件版本', en: 'Installed plugin versions' },
+      tab: { zh: '已安装插件', en: 'Installed plugins' },
+      title: { zh: '已安装插件', en: 'Installed plugins' },
       hint: {
         zh: '切换版本走宿主 pluginManager：先卸载旧版本、再安装目标版本，失败会自动装回原版本。操作后通常需要刷新页面。',
         en: 'Version switches go through the host pluginManager: remove, then install, with automatic rollback on failure. Refresh the page afterwards.',
@@ -325,14 +325,7 @@ window.__ModuleLoader__.load({
     return {
       inject: ['slots'],
       apply(ctx) {
-        // 插件页：Installed 之后的「版本」标签
-        ctx.slots.inject('plugins.tab', () =>
-          ctx.slots.register(
-            { name: 'plugins.tab', id: 'versions', order: 10, label: () => t('tab') },
-            VersionsTab,
-          ),
-        );
-        // 设置 → 插件：同一个页面的第二个入口，符合「版本管理属于插件设置」的直觉
+        // 只注册到「设置 → 插件」这一个入口；插件页那个重复标签已移除。
         ctx.slots.inject('settings.plugins.tab', () =>
           ctx.slots.register(
             { name: 'settings.plugins.tab', id: 'versions', order: 20, label: () => t('tab') },

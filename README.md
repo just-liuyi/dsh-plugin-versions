@@ -1,6 +1,6 @@
 # dsh-plugin-versions
 
-Version browser for **DeepSeek Harness** plugins. It adds a **Versions** tab to the Web **Plugins** page where you can see every published version of an installed plugin, switch to one, roll back, or uninstall it — all through the host's own `pluginManager` service.
+Version browser for **DeepSeek Harness** plugins. It adds an **Installed plugins** page under **Settings → Plugins** where you can see every published version of an installed plugin, switch to one, roll back, or uninstall it — all through the host's own `pluginManager` service.
 
 English | [中文](./README.zh.md)
 
@@ -39,8 +39,8 @@ Once published to npm, `dsh plugin add dsh-plugin-versions` will work as well.
 
 ## Use
 
-1. Open **Plugins** in the sidebar.
-2. Select the **Versions** tab.
+1. Open **Settings → Plugins**.
+2. Select the **Installed plugins** tab.
 3. Expand a plugin to see its versions. The current one is tagged, and the newest is tagged `latest`.
 4. **Switch** asks for confirmation, then removes and reinstalls the plugin at that version. A failure rolls back automatically.
 5. **Uninstall** removes the bundle; its configuration is kept.
