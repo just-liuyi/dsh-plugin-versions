@@ -21,11 +21,21 @@
 
 ## 安装
 
+npm 包还没发布，先从仓库装：
+
 ```bash
-dsh plugin --profile <name> add dsh-plugin-versions
+dsh plugin --profile <name> add github:DangDangDeng/dsh-plugin-versions
 ```
 
-DSH Desktop 的 `desktop` profile 由应用独占管理，CLI 装不了，请在 **插件 → 添加插件** 里填 `dsh-plugin-versions`。装完重启或刷新页面。
+或者用完整 Git 地址：
+
+```bash
+dsh plugin --profile <name> add git+https://github.com/DangDangDeng/dsh-plugin-versions.git
+```
+
+DSH Desktop 的 `desktop` profile 由应用独占管理，CLI 装不了，请在 **插件 → 添加插件** 里填 `github:DangDangDeng/dsh-plugin-versions`。装完重启或刷新页面。需要锁版本时在末尾加 `#<tag>` 或 `#<commit>`。
+
+npm 发布之后，`dsh plugin add dsh-plugin-versions` 也可以直接用。
 
 ## 使用
 

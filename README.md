@@ -21,11 +21,21 @@ This plugin adds exactly that missing surface, without replacing the market or t
 
 ## Install
 
+The npm package is not published yet, so install straight from this repository:
+
 ```bash
-dsh plugin --profile <name> add dsh-plugin-versions
+dsh plugin --profile <name> add github:DangDangDeng/dsh-plugin-versions
 ```
 
-In DSH Desktop the `desktop` profile is managed by the application, so install it from **Plugins → Add plugin** (`dsh-plugin-versions`) instead of the CLI. Restart or refresh the page afterwards.
+or with an explicit Git URL:
+
+```bash
+dsh plugin --profile <name> add git+https://github.com/DangDangDeng/dsh-plugin-versions.git
+```
+
+In DSH Desktop the `desktop` profile is managed by the application, so use **Plugins → Add plugin** and enter `github:DangDangDeng/dsh-plugin-versions` instead of the CLI. Restart or refresh the page afterwards. Add `#<tag>` or `#<commit>` to pin a revision.
+
+Once published to npm, `dsh plugin add dsh-plugin-versions` will work as well.
 
 ## Use
 
