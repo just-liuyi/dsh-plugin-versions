@@ -100,7 +100,10 @@ window.__ModuleLoader__.load({
       wrap: { display: 'flex', flexDirection: 'column', gap: '10px', padding: '4px 2px 18px', fontSize: '13px', color: 'var(--dsw-alias-label-primary)' },
       top: { display: 'flex', alignItems: 'baseline', gap: '10px', flexWrap: 'wrap' },
       title: { fontWeight: 600, fontSize: '14px' },
-      hint: { color: 'var(--dsw-alias-label-tertiary)', fontSize: '11px', lineHeight: 1.5, flex: '1 1 320px' },
+      // `wrap` is a column flex container, so a numeric flex-basis on this child
+      // would become its HEIGHT (a 320px block holding two lines of text). The
+      // hint only has to fill the width, which `align-items: stretch` handles.
+      hint: { color: 'var(--dsw-alias-label-tertiary)', fontSize: '11px', lineHeight: 1.5, flex: '0 0 auto' },
       button: {
         background: 'var(--dsw-alias-button-ghost-active-fill)',
         color: 'var(--dsw-alias-label-primary)',

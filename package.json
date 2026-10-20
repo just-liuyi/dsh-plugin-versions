@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-versions",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Installed-plugin manager for DeepSeek Harness: list published versions of an installed plugin, switch or roll back, and uninstall, from Settings -> Plugins.",
   "keywords": [
     "dsh",
